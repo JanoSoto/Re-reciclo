@@ -12,31 +12,61 @@
 		<li class="pull-right"><a href="<?php echo base_url();?>">Bienvenido <?php echo $user; ?></a></li>
 	</ul>
 
-	<div class="panel panel-default">
-		<div class="panel-heading">Lista de interesados</div>
+	
+	<div class="panel panel-info">
+		<br>
+		<br>
+		<div class="panel-heading">Lista de Notificaciones de transacción</div>
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Tipo de desecho</th>
 						<th>Reciclador</th>
+						<th>Material</th>
+						<th>Cantidad</th>
+						<th>Días</th>
+						<th>Horario</th>
+						<th> </th>
 					</tr>	
 				</thead>
 				<tbody>
 					<?php if($espera != NULL){ ?>
-					<?php foreach($espera->result() as $elem) { ?>
+
+					<?php foreach($espera as $elem) { ?>
 						<tr>
-							<td><?= $elem->NOMBRE_TIPO; ?></td>
 							<td>
-								<?= $elem->NOMBRE_RECICLADOR;?>
-								   <?= $elem->APELLIDO_PAT_RECICLADOR;?>
+								<?= $elem['NOMBRE_RECICLADOR'];?>
+								   <?= $elem['APELLIDO_PAT_RECICLADOR'];?>
 							</td>
+							<td>
+								<?=$elem['NOMBRE_TIPO']; ?>
+							</td>
+							<td>
+								<?=$elem['CANTIDAD_DESECHO']; ?>
+							</td>
+							<td>
+								<?=$elem['FECHA_DESDE_TRANS']; ?>
+									-
+								<?=$elem['FECHA_HASTA_TRANS']; ?>	
+							</td>
+							<td>
+								<?=$elem['HORA_DESDE_TRANS']; ?>
+									-
+								<?=$elem['HORA_HASTA_TRANS']; ?>	
+							</td>
+
 							<td><a class="btn btn-info active" href="#">¡Ven por él!</a> </td>
+							
+							<td><a class="btn btn-danger active" href="../index.php/notificacion/completartrans?id=<?php echo $id; ?>&trans=<?php echo $elem['ID_TRANS']; ?>">Completar Transacción</a> </td>
+							
+
+
+							
 
 						</tr>
 					<?php }
 					} 
 					else{ ?>
-						<h3>No hay interesados</h3>
+						<h3>No hay notificaciones disponibles</h3>
 					<?php } ?>
 				</tbody>
 			</table>

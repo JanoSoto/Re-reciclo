@@ -12,6 +12,12 @@
 		<li class="pull-left" style="color:white;"><h2>Re-reciclo</h2></li>
 		<li class="pull-right"><a href="<?php echo base_url();?>">Bienvenido <?php echo $user; ?></a></li>
 	</ul>
+	<br>
+	<div class="container">
+			<a href="<?php echo base_url();?>index.php/home?id=<?php echo $id;?>" ><button class="btn btn-info pull-right">Volver</button></a>
+			<br>
+		</div>
+		<br>
 	<?= form_open('listaDisponibles/mostrar_disponibles' .'?id='.$id); ?>	
 	<label>Elija el tipo de desecho que desea buscar: </label>
 		<?php $opciones = array(

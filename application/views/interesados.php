@@ -30,7 +30,7 @@
 								<?= $elem->NOMBRE_RECICLADOR;?>
 								   <?= $elem->APELLIDO_PAT_RECICLADOR;?>
 							</td>
-							<td><a class="btn btn-info active" href="#">¡Ven por él!</a> </td>
+							<td><a class="btn btn-info active" href="<?php echo base_url();?>index.php/notificacion/setTransaccion?id=<?php echo $id;?>&id_trans=<?php echo $elem->ID_TRANS;?>">¡Ven por él!</a> </td>
 
 						</tr>
 					<?php }
@@ -44,3 +44,6 @@
 	</div>
 </body>
 </html>
+
+<thead>
+					

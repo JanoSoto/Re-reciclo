@@ -41,7 +41,7 @@
     					<a class="btn btn-success active" href="<?php echo base_url();?>index.php/listaDisponibles?id=<?php echo $id ?>">Necesito reciclar!</a>
     					<br>
     					<br>
-    					<a class="btn btn-info active" href="<?php echo base_url();?>index.php/notificaciones">Notificaciones en espera  
+    					<a class="btn btn-info active" href="<?php echo base_url();?>index.php/notificacion?id=<?php echo $id ?>">Notificaciones en espera  
     						<?php 
     							if($notif!=0) 
     								echo '<span class="badge" style="background-color:red;">'.$notif.'</span>';  

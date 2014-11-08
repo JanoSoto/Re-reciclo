@@ -16,7 +16,7 @@
 			$this->load->model('transaccion_model');
 			$numNotif=$this->transaccion_model->numNotificaciones($id);
 			$data['notif']=$numNotif;
-		
+			
 			$this->load->view('home',$data);
 		}
 
