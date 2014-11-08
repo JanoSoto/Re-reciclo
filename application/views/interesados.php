@@ -32,6 +32,7 @@
 							</td>
 							<td><a class="btn btn-info active" href="<?php echo base_url();?>index.php/notificacion/setTransaccion?id=<?php echo $id;?>&id_trans=<?php echo $elem->ID_TRANS;?>">¡Ven por él!</a> </td>
 
+
 						</tr>
 					<?php }
 					} 
@@ -45,5 +46,3 @@
 </body>
 </html>
 
-<thead>
-					

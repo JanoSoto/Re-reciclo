@@ -59,6 +59,8 @@
 			$datos['comentario'] = $this->input->post('comentario');
 
 			$query = $this->transaccion_model->updateTransaccion($id, $datos);
+
+			redirect('../index.php/home?id=' .$id);
 		}
 	}
 ?>

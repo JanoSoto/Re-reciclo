@@ -21,6 +21,8 @@
   					<div class="panel-body">
     				<center>
     					<a class="btn btn-success active" href="<?php echo base_url();?>index.php/quieroreciclar?id=<?php echo $id;?>">¡Quiero reciclar!</a>
+    					
+
     					<br>
     					<br>
     					<a class="btn btn-info active" href="<?php echo base_url();?>index.php/interesados?id=<?php echo $id ?>">Lista de material en espera</a> 	 	
@@ -49,6 +51,7 @@
     								echo '<span class="badge" >'.$notif.'</span>';
     						 ?>
     					</a>
+
     				</center>
     				<hr>
     				<div>

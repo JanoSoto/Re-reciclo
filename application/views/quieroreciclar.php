@@ -5,10 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap-theme.css">
-		<script>
 
-		
-		</script>		
 	</head>
 	<body >
 		<ul class="nav " role="tablist" style="background-color:green; height:50px">
@@ -29,6 +26,7 @@
 			  		<div class="panel-heading">Quiero reciclar</div>
   					<div class="panel-body">
     					<center>
+
     						<?php echo form_open('quieroreciclar/reciclar'.'?id='.$id); ?>
     					<table style="width:50%">
     						<tr>
@@ -39,13 +37,15 @@
 								  <option value="2">Cartón</option>
 								  <option value="3">Botellas plásticas</option>
 								  <option value="4">Vidrio</option>
+
 								  <option value="otro">Otro</option>
 								</select></td>
 							</tr>
 							<tr><td><br></td><td><br></td></tr>
 							<tr>
 								<td style="width:50%">¿Otro? </td>
-								<td style="width:50%"><input id='otro' type="text" name="otro" class="disabled" DISABLED > </td>
+
+								<td style="width:50%"><input type="text" name="otro" class="disabled" DISABLED > </td>
 							</tr>
 							<tr><td><br></td><td><br></td></tr>
 							<tr> 
@@ -70,6 +70,7 @@
 						<br>
 						<table style="width:50%">
 							<tr>
+
 								<?php 
 								/*<?=form_open_multipart('quieroreciclar/do_upload'); ?>
 								<td><input class="btn btn-default pull-left" type="submit" value="Subir foto"></td>

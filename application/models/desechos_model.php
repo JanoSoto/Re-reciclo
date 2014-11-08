@@ -18,6 +18,7 @@
 			
 		}
 
+
 		function setDesechos($id_reciclador, $id_tipo, $cuanto, $fecha, $descripcion)
 		{
 			$query =$this->db->query('INSERT INTO desecho(id_tipo, id_reciclador, cantidad_desecho, fecha_fin_desecho, descripcion_desecho) values('.$id_tipo.','.$id_reciclador.','.$cuanto.',"'.$fecha.'","'.$descripcion.'")');

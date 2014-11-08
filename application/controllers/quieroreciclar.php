@@ -37,6 +37,7 @@
 				
 				$this->load->view('upload_success', $data);
 			}
+
 		}
 
 		public function reciclar()
@@ -70,6 +71,7 @@
 			$result_query=$this->usuario_model->getuser($id_reciclador);
 			$data['user']=$result_query['user_reciclador'];
 			$this->load->view('quieroreciclar',$data);
+
 		}	
 		
 	}

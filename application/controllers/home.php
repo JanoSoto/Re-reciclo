@@ -13,6 +13,7 @@
 			$data['user']=$result_query['user_reciclador'];
 			$data['id']=$id;
 
+
 			$this->load->model('transaccion_model');
 			$numNotif=$this->transaccion_model->numNotificaciones($id);
 			$data['notif']=$numNotif;
