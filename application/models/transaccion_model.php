@@ -11,6 +11,12 @@
 			return $query;
 		}
 
+		public function getEnEspera($id){
+			$query = $this->db->query('SELECT NOMBRE_TIPO, NOMBRE_RECICLADOR, APELLIDO_PAT_RECICLADOR FROM TRANSACCION T, RECICLADOR R, DESECHO D, TIPO Ti WHERE T.ID_DESECHO = D.ID_DESECHO AND D.ID_TIPO = Ti.ID_TIPO AND T.ID_RECICLADOR = R.ID_RECICLADOR AND T.REC_ID_RECICLADOR = "'.$id. '"');
+
+			return $query;
+		}
+
 	}
 
 ?>

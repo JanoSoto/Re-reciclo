@@ -20,10 +20,10 @@
 			  		<div class="panel-heading">Tengo cosas para reciclar/reutilizar</div>
   					<div class="panel-body">
     				<center>
-    					<button class="btn btn-success"><a href="<?php echo base_url();?>index.php/quieroreciclar">¡Quiero reciclar!</a></button>
+    					<a class="btn btn-success active" href="<?php echo base_url();?>index.php/quieroreciclar">¡Quiero reciclar!</a>
     					<br>
     					<br>
-    					<button class="btn btn-info">Lista de material en espera</button> 	 	
+    					<a class="btn btn-info active" href="<?php echo base_url();?>index.php/interesados?id=<?php echo $id ?>">Lista de material en espera</a> 	 	
     				</center>
     				<hr>
     				<div>
@@ -38,10 +38,10 @@
 			  		<div class="panel-heading">Busco cosas para reciclar/reutilizar</div>
   					<div class="panel-body">
     				<center>
-    					<button class="btn btn-success"> <a href="<?php echo base_url();?>index.php/listaDisponibles?id=<?php echo $id ?>">Necesito reciclar!</a></button>
+    					<a class="btn btn-success active" href="<?php echo base_url();?>index.php/listaDisponibles?id=<?php echo $id ?>">Necesito reciclar!</a>
     					<br>
     					<br>
-    					<a href="<?php echo base_url();?>index.php/notificaciones"><button class="btn btn-info">Notificaciones en espera  <span class="badge">4</span></button></a>
+    					<a class="btn btn-info active" href="<?php echo base_url();?>index.php/notificaciones">Notificaciones en espera  <span class="badge">4</span></a>
     				</center>
     				<hr>
     				<div>

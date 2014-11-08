@@ -23,6 +23,6 @@
 				); 
 		echo form_dropdown('option', $opciones, 'papel'); ?>
 	
-		<?= form_submit('', 'Buscar'); ?> 
+		<?= form_submit('', 'Buscar'); ?>
 	</form>
 

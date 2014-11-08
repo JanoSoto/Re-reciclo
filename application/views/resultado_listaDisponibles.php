@@ -18,9 +18,9 @@
 					<td><?= $elem->CANTIDAD_DESECHO; ?></td>
 					<td>
 						<?= $elem->NOMBRE_RECICLADOR;?>
-						   <?= $elem->APELLIDO_PAT_RECICLADOR?>
+						    <?= $elem->APELLIDO_PAT_RECICLADOR?>
 					</td>
-					<td><button><a href="<?php echo base_url();?>index.php/transaccion?id_rec=<?php echo $id;?>&id_des=<?php echo $elem->ID_RECICLADOR?>&id_desecho=<?php echo $elem->ID_DESECHO?>&nom=<?php echo $elem->NOMBRE_RECICLADOR?>&ape=<?php echo $elem->APELLIDO_PAT_RECICLADOR ?>">Adquirir</a> </button></td>
+					<td><a class="btn btn-info active" href="<?php echo base_url();?>index.php/transaccion?id_rec=<?php echo $id;?>&id_des=<?php echo $elem->ID_RECICLADOR?>&id_desecho=<?php echo $elem->ID_DESECHO?>&nom=<?php echo $elem->NOMBRE_RECICLADOR?>&ape=<?php echo $elem->APELLIDO_PAT_RECICLADOR ?>">Adquirir</a></td>
 
 				</tr>
 			<?php } 
