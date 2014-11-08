@@ -19,7 +19,11 @@
 			$data=array();
 
 			if($resultquery !=null)
-				$this->load->view('home');
+			{
+				$id=$resultquery['id_reciclador'];
+				redirect('../index.php/home?id='.$id);
+				
+			}
 			
 			else 
 			{

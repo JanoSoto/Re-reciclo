@@ -7,7 +7,12 @@
 	
 		public function index()
 		{
-			$this->load->view('home');
+			$id=$this->input->get('id');
+			$this->load->model('usuario_model');
+			$result_query=$this->usuario_model->getuser($id);
+			$data['user']=$result_query['user_reciclador'];
+
+			$this->load->view('home',$data);
 		}
 
 		

@@ -10,7 +10,7 @@
 	<body >
 		<ul class="nav " role="tablist" style="background-color:green; height:50px">
 			<li class="pull-left" style="color:white;"><h2>Re-reciclo</h2></li>
-			<li class="pull-right"><a href="<?php echo base_url();?>">Bienvenido Usuario</a></li>
+			<li class="pull-right"><a href="<?php echo base_url();?>">Bienvenido <?php echo $user; ?></a></li>
 		</ul>
 		<br>
 		<div class="container-fluid">
