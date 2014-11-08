@@ -6,7 +6,7 @@
 		}
 
 		public function guardarTransaccion($id_rec, $id_des, $id_desecho){
-			$query = $this->db->query('INSERT INTO TRANSACCION (ID_RECICLADOR, REC_ID_RECICLADOR, ID_DESECHO, ESTADO_TRANS) VALUES ("'.$id_rec.'", "'.$id_des.'", "'.$id_desecho.'", "En espera")');
+			$query = $this->db->query('INSERT INTO TRANSACCION (ID_RECICLADOR, REC_ID_RECICLADOR, ID_DESECHO, ESTADO_TRANS, ESTADO_FINAL_TRANS) VALUES ("'.$id_rec.'", "'.$id_des.'", "'.$id_desecho.'", "En espera","INCOMPLETO")');
 
 			return $query;
 		}
@@ -27,7 +27,7 @@
 
 		public function getNotificaciones($id)
 		{
-			$query= $this->db->query('SELECT NOMBRE_TIPO, NOMBRE_RECICLADOR, APELLIDO_PAT_RECICLADOR FROM TRANSACCION T, RECICLADOR R, DESECHO D, TIPO Ti WHERE T.ID_DESECHO = D.ID_DESECHO AND D.ID_TIPO = Ti.ID_TIPO AND T.ID_RECICLADOR = R.ID_RECICLADOR AND T.REC_ID_RECICLADOR ='.$id.' AND T.estado_trans =  "En espera"');
+			$query= $this->db->query('SELECT ID_TRANS, NOMBRE_TIPO, NOMBRE_RECICLADOR, APELLIDO_PAT_RECICLADOR, CANTIDAD_DESECHO, FECHA_DESDE_TRANS, FECHA_HASTA_TRANS, HORA_DESDE_TRANS, HORA_HASTA_TRANS FROM TRANSACCION T, RECICLADOR R, DESECHO D, TIPO Ti WHERE T.ID_DESECHO = D.ID_DESECHO AND D.ID_TIPO = Ti.ID_TIPO AND T.ID_RECICLADOR = R.ID_RECICLADOR AND T.REC_ID_RECICLADOR ='.$id.' AND T.ESTADO_FINAL_TRANS =  "INCOMPLETO"');
 			$result=$query->result_array();
 			return $result;
 		}
@@ -39,7 +39,7 @@
 		}
 
 		public function updateTransaccion($id, $data){
-			$query = $this->db->query('UPDATE TRANSACCION SET FECHA_DESDE_TRANS ="'.$data['fecha_desde'].'", FECHA_HASTA_TRANS ="'.$data['fecha_hasta']. '", HORA_DESDE_TRANS ="'.$data['hora_desde'].'", HORA_HASTA_TRANS ="'.$data['hora_hasta'].'", COMENTARIO_TRANS ="'.$data['comentario'].'" WHERE ID_TRANS = '.$id);
+			$query = $this->db->query('UPDATE TRANSACCION SET FECHA_DESDE_TRANS ="'.$data['fecha_desde'].'", FECHA_HASTA_TRANS ="'.$data['fecha_hasta']. '", HORA_DESDE_TRANS ="'.$data['hora_desde'].'", HORA_HASTA_TRANS ="'.$data['hora_hasta'].'", COMENTARIO_TRANS ="'.$data['comentario'].'", ESTADO_FINAL_TRANS = "INCOMPLETO" WHERE ID_TRANS = '.$id);
 			return $query;
 		}
 

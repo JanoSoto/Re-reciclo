@@ -53,8 +53,6 @@
 									-
 								<?=$elem['HORA_HASTA_TRANS']; ?>	
 							</td>
-
-							<td><a class="btn btn-info active" href="#">¡Ven por él!</a> </td>
 							
 							<td><a class="btn btn-danger active" href="../index.php/notificacion/completartrans?id=<?php echo $id; ?>&trans=<?php echo $elem['ID_TRANS']; ?>">Completar Transacción</a> </td>
 							
