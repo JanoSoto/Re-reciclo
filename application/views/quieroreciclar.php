@@ -10,11 +10,11 @@
 	<body >
 		<ul class="nav " role="tablist" style="background-color:green; height:50px">
 			<li class="pull-left" style="color:white;"><h2>Re-reciclo</h2></li>
-			<li class="pull-right"><a href="<?php echo base_url();?>">Bienvenido Usuario</a></li>
+			<p class="pull-right">Bienvenido <a href="<?php echo base_url();?>" style="color:white;"><?php echo $user; ?></a></p>
 		</ul>
 		<br>
 		<div class="container">
-			<a href="<?php echo base_url();?>index.php/home" ><button class="btn btn-info pull-right">Volver</button></a>
+			<a href="<?php echo base_url();?>index.php/home?id=<?php echo $id;?>" ><button class="btn btn-info pull-right">Volver</button></a>
 			<br>
 		</div>
 		<br>

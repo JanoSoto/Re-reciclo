@@ -11,7 +11,7 @@
 			$this->load->model('usuario_model');
 			$result_query=$this->usuario_model->getuser($id);
 			$data['user']=$result_query['user_reciclador'];
-
+			$data['id']=$id;
 			$this->load->view('home',$data);
 		}
 
