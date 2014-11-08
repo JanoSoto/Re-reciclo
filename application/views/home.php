@@ -38,7 +38,7 @@
 			  		<div class="panel-heading">Busco cosas para reciclar/reutilizar</div>
   					<div class="panel-body">
     				<center>
-    					<button class="btn btn-success">Necesito reciclar!</button>
+    					<button class="btn btn-success"> <a href="<?php echo base_url();?>index.php/listaDisponibles?id=<?php echo $id ?>">Necesito reciclar!</a></button>
     					<br>
     					<br>
     					<a href="<?php echo base_url();?>index.php/notificaciones"><button class="btn btn-info">Notificaciones en espera  <span class="badge">4</span></button></a>

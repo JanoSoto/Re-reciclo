@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Lista Disponibles</title>
+	<title>Envío notificación</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.css">
@@ -12,17 +11,11 @@
 		<li class="pull-left" style="color:white;"><h2>Re-reciclo</h2></li>
 		<li class="pull-right"><a href="<?php echo base_url();?>">Bienvenido <?php echo $user; ?></a></li>
 	</ul>
-	<?= form_open('listaDisponibles/mostrar_disponibles' .'?id='.$id); ?>	
-	<label>Elija el tipo de desecho que desea buscar: </label>
-		<?php $opciones = array(
-				'papel' => 'papel',
-				'carton' => 'carton',
-				'botellasp' => 'botellasp',
-				'vidrio' => 'vidrio',
-				'otro' => 'otro',	
-				); 
-		echo form_dropdown('option', $opciones, 'papel'); ?>
-	
-		<?= form_submit('', 'Buscar'); ?> 
-	</form>
-
+	<div class="well">
+		<?php if(isset($msje_result))
+			echo $msje_result;
+		?>
+	</div>
+	<button class="btn btn-success "> <a href="../index.php/home?id=<?php echo $id ?>">Volver</a> </button>
+</body>
+</html>

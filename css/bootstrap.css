@@ -44,10 +44,12 @@ template {
 }
 a {
   background: transparent;
+  color: #fff;
 }
 a:active,
 a:hover {
   outline: 0;
+  color: #fff;
 }
 abbr[title] {
   border-bottom: 1px dotted;
